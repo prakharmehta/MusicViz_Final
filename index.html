@@ -166,230 +166,230 @@
           <!-- <h2>About the Data</h2> -->
         </div>
       </div>
+      <div class="container-row" id="select-axes" style="margin-top: -400px; margin-left: 50%; width: 50%;" >
+        <!-- <div class="cell grow mb-xs" style="margin-bottom: 10px;">
+          <div>
+            <small class="nowrap">Position data points by</small>
+          </div>
+          <div class="container-row">
+            <div class="radio grow">
+              <input type="radio" id="radio-pca-on" name="radio-pca" value="mode-pca">
+              <label for="radio-pca-on" class="btn btn-block text-center add-help nowrap clickable" data-help-key="mode-pca"><small>Group by Similarity</small> </label>
+            </div>
+            <div class="grow radio">
+              <input type="radio" id="radio-pca-off" name="radio-pca" value="mode-value" checked>
+              <label for="radio-pca-off" class="btn btn-block text-center add-help nowrap clickable" data-help-key="mode-value"><small>Plot by Value</small> </label>
+            </div>
+          </div>
+        </div> -->
+        <div class="cell grow" style="margin-left:53%; margin-top:0;">
+          <div class="margin-gutter">
+            <div>
+              <small class="nowrap">X Axis</small>
+            </div>
+            <select
+              name="select-x-axis"
+              class="btn active vis-control"
+              id="select-x-axis"
+              style="width: 90%;"
+            >
+              <option
+                data-scale-type="linear"
+                value="select"
+                data-radial="true"
+                selected="selected"
+              >
+                Select
+              </option>
+              <!-- <option data-scale-type="linear" value="key_signature_by_fifths" data-radial="true">KEY (Ordered by Circle of Fifths)</option> -->
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="100"
+                value="popularity"
+              >
+                POPULARITY
+              </option>
+              <option data-scale-type="linear" value="release_year">
+                YEAR
+              </option>
+              <option data-scale-type="linear" value="loudness">
+                LOUDNESS
+              </option>
+              <option data-scale-type="linear" value="duration">
+                DURATION
+              </option>
+              <option
+                data-scale-type="linear"
+                value="tempo"
+                selected="selected"
+              >
+                TEMPO
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="energy"
+              >
+                ENERGY
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="danceability"
+              >
+                DANCEABILITY
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="valence"
+              >
+                POSITIVENESS
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="acousticness"
+              >
+                ACOUSTICNESS
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="liveness"
+              >
+                LIVENESS
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="instrumentalness"
+              >
+                INSTRUMENTALNESS
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="speechiness"
+              >
+                SPEECHINESS
+              </option>
+              <!-- <option data-scale-type="linear" value="pca1">PCA1</option>	 -->
+            </select>
+          </div>
+        </div>
+        <div class="cell grow">
+          <div class="margin-gutter">
+            <div>
+              <small class="nowrap" style="margin-left: 57.5%">Y Axis</small>
+            </div>
+            <select
+              name="select-y-axis"
+              class="btn active vis-control"
+              id="select-y-axis"
+              style="width: 40%; margin-left: 57.5%;"
+            >
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="100"
+                value="select"
+                selected="selected"
+              >
+                Select
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="100"
+                value="popularity"
+              >
+                POPULARITY
+              </option>
+              <option data-scale-type="linear" value="release_year">
+                YEAR
+              </option>
+              <option data-scale-type="linear" value="loudness">
+                LOUDNESS
+              </option>
+              <option data-scale-type="linear" value="duration">
+                DURATION
+              </option>
+              <option data-scale-type="linear" value="tempo">TEMPO</option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="energy"
+              >
+                ENERGY
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="danceability"
+              >
+                DANCEABILITY
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="valence"
+              >
+                POSITIVENESS
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="acousticness"
+              >
+                ACOUSTICNESS
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="liveness"
+              >
+                LIVENESS
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="instrumentalness"
+              >
+                INSTRUMENTALNESS
+              </option>
+              <option
+                data-scale-type="linear"
+                data-scale-min="0"
+                data-scale-max="1"
+                value="speechiness"
+              >
+                SPEECHINESS
+              </option>
+              <!-- <option data-scale-type="linear" value="pca2">PCA2</option>	 -->
+            </select>
+          </div>
+        </div>
+      </div>
       <div class="cell grow container-col central-column">
         <div
           id="vis-area"
           class="cell grow container-col container-col-rev-sm anti-cell-sm"
         >
-          <div class="container-row" id="select-axes" style="margin-top: -400px; margin-left: 50%; width: 50%;" >
-            <!-- <div class="cell grow mb-xs" style="margin-bottom: 10px;">
-							<div>
-								<small class="nowrap">Position data points by</small>
-							</div>
-							<div class="container-row">
-								<div class="radio grow">
-									<input type="radio" id="radio-pca-on" name="radio-pca" value="mode-pca">
-									<label for="radio-pca-on" class="btn btn-block text-center add-help nowrap clickable" data-help-key="mode-pca"><small>Group by Similarity</small> </label>
-								</div>
-								<div class="grow radio">
-									<input type="radio" id="radio-pca-off" name="radio-pca" value="mode-value" checked>
-									<label for="radio-pca-off" class="btn btn-block text-center add-help nowrap clickable" data-help-key="mode-value"><small>Plot by Value</small> </label>
-								</div>
-							</div>
-						</div> -->
-            <div class="cell grow" style="margin-left:53%; margin-top:0;">
-              <div class="margin-gutter">
-                <div>
-                  <small class="nowrap">X Axis</small>
-                </div>
-                <select
-                  name="select-x-axis"
-                  class="btn active vis-control"
-                  id="select-x-axis"
-                  style="width: 90%;"
-                >
-                  <option
-                    data-scale-type="linear"
-                    value="select"
-                    data-radial="true"
-                    selected="selected"
-                  >
-                    Select
-                  </option>
-                  <!-- <option data-scale-type="linear" value="key_signature_by_fifths" data-radial="true">KEY (Ordered by Circle of Fifths)</option> -->
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="100"
-                    value="popularity"
-                  >
-                    POPULARITY
-                  </option>
-                  <option data-scale-type="linear" value="release_year">
-                    YEAR
-                  </option>
-                  <option data-scale-type="linear" value="loudness">
-                    LOUDNESS
-                  </option>
-                  <option data-scale-type="linear" value="duration">
-                    DURATION
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    value="tempo"
-                    selected="selected"
-                  >
-                    TEMPO
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="energy"
-                  >
-                    ENERGY
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="danceability"
-                  >
-                    DANCEABILITY
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="valence"
-                  >
-                    POSITIVENESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="acousticness"
-                  >
-                    ACOUSTICNESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="liveness"
-                  >
-                    LIVENESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="instrumentalness"
-                  >
-                    INSTRUMENTALNESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="speechiness"
-                  >
-                    SPEECHINESS
-                  </option>
-                  <!-- <option data-scale-type="linear" value="pca1">PCA1</option>	 -->
-                </select>
-              </div>
-            </div>
-            <div class="cell grow">
-              <div class="margin-gutter">
-                <div>
-                  <small class="nowrap" style="margin-left: 57.5%">Y Axis</small>
-                </div>
-                <select
-                  name="select-y-axis"
-                  class="btn active vis-control"
-                  id="select-y-axis"
-                  style="width: 40%; margin-left: 57.5%;"
-                >
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="100"
-                    value="select"
-                    selected="selected"
-                  >
-                    Select
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="100"
-                    value="popularity"
-                  >
-                    POPULARITY
-                  </option>
-                  <option data-scale-type="linear" value="release_year">
-                    YEAR
-                  </option>
-                  <option data-scale-type="linear" value="loudness">
-                    LOUDNESS
-                  </option>
-                  <option data-scale-type="linear" value="duration">
-                    DURATION
-                  </option>
-                  <option data-scale-type="linear" value="tempo">TEMPO</option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="energy"
-                  >
-                    ENERGY
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="danceability"
-                  >
-                    DANCEABILITY
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="valence"
-                  >
-                    POSITIVENESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="acousticness"
-                  >
-                    ACOUSTICNESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="liveness"
-                  >
-                    LIVENESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="instrumentalness"
-                  >
-                    INSTRUMENTALNESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="speechiness"
-                  >
-                    SPEECHINESS
-                  </option>
-                  <!-- <option data-scale-type="linear" value="pca2">PCA2</option>	 -->
-                </select>
-              </div>
-            </div>
-          </div>
           <div class="container-row">
             <div class="cell hide" id="pca-axes-notes">
               <small
@@ -439,7 +439,7 @@
         </div>
       </div>
       
-      <div class="cell container-col collapse-sm sidebar-lg" style="margin-left: 25%; margin-top: 20px; margin-bottom: 100px;" >
+      <div class="cell container-col collapse-sm sidebar-lg" style="margin-left: 25%; margin-top: 50px; margin-bottom: 100px;" >
         <h2>Song Feature Distributions</h2>
         <svg id="histogram-view" class="grow" overflow="visible" width="1000px" height="2000px" ></svg>
         <!-- <h2>Legend</h2>
@@ -512,7 +512,7 @@
     <script src="js/radialplot_with_split.js"></script>
     <script src="js/histograms.js"></script>
     <script src="js/starplots.js"></script>
-    <!-- <script src="js/tutorial.js"></script> -->
+    <script src="js/tutorial.js"></script>
 
     <script>
       var ENABLE_TUTORIAL = true;

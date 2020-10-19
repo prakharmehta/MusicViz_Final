@@ -71,7 +71,7 @@ d3.select('body').on('click.tutorial', function () {
 
     var outsideTutorial = d3.select('#tutorial').filter(equalToEventTarget).empty();
     
-    if (outsideTutorial && d3.select('#tutorial').classed('ready')) {
-        clearTutorial();
-    }
+    // if (outsideTutorial && d3.select('#tutorial').classed('ready')) {
+    //     clearTutorial();
+    // }
 });

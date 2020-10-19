@@ -14,6 +14,13 @@ body {
     
 }
 
+.central-column {
+    position: relative;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    max-width: 25vw;
+}
 
     
     
@@ -120,12 +127,13 @@ b, [font-weight="bold"] {
     border-radius: 7px;
     border: 1px #fff5 solid;
     line-height: 25px;
-    /opacity: 0.25;/
+    /* /opacity: 0.25;/ */
     transition: border 0.2s;
 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    z-index: 10!important;
 }
 
 .artist-btn:hover {

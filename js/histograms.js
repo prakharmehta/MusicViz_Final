@@ -244,7 +244,7 @@ class HistogramView {
     .range(range);
 
     // used for forcing x axis ticks to have specific values
-    let numTicks = 1; // <--- Adjust this value to force a different number of ticks on the axis
+    let numTicks = 10; // <--- Adjust this value to force a different number of ticks on the axis
     let start = this.x.domain()[0];
     let end = this.x.domain()[1];
     let step = (this.x.domain()[1] - this.x.domain()[0])/numTicks;
@@ -543,7 +543,7 @@ class HistogramView {
           .range(this.range);
 
           // used for forcing x axis ticks to have specific values
-          this.numTicks = 1; // <--- Adjust this value to force a different number of ticks on the axis
+          this.numTicks = 10; // <--- Adjust this value to force a different number of ticks on the axis
           this.start = this.x.domain()[0];
           this.end = this.x.domain()[1];
           this.step = (this.x.domain()[1] - this.x.domain()[0])/this.numTicks;
