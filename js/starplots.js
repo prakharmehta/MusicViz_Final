@@ -72,7 +72,6 @@ var removeIndex;
 
 class StarView {
     constructor (svg, data, dispatch) {
-        // @Shelly
         
         // init here
         d3.select('#star-view').selectAll('*').remove();

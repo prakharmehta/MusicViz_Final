@@ -3,7 +3,17 @@ Audio.prototype.fadeQueue = [];
 
 Audio.prototype.playFadeIn = function (time = 300, nSteps = 20) {
     this.volume = 0;
-    this.play();
+    var playPromise = this.play();
+    if (playPromise !== undefined) {
+        playPromise.then(_ => {
+          // Automatic playback started!
+          // Show playing UI.
+        })
+        .catch(error => {
+          // Auto-play was prevented
+          // Show paused UI.
+        });
+      }
     // FIXME fadeTo is still buggy.
     return this.fadeTo(1, time, nSteps);
 }

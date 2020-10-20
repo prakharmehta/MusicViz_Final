@@ -55,7 +55,7 @@ b, [font-weight="bold"] {
     padding-top: 30px;
     padding-bottom: 30px;
     width: 100vw;
-    background-size: ;
+    /* background-size: ; */
     
 }
 
@@ -196,7 +196,7 @@ div.awesomplete {
     border-radius: 7px;
     border: 1px #fff5 solid;
     line-height: 25px;
-    /opacity: 0.25;/
+    /* /opacity: 0.25;/ */
     transition: border 0.2s;
 }
 
