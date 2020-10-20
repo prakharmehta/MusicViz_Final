@@ -1069,10 +1069,10 @@
         components.forEach(function (c) {
           c.onDataChanged(data);
         });
-        document.title = "VINYL - " + data.map((d) => d.name).join(" v ");
+        document.title = "VizSong - " + data.map((d) => d.name).join(" v ");
         history.pushState(
           {},
-          "VINYL - " + data.map((d) => d.name).join(" v "),
+          "VizSong - " + data.map((d) => d.name).join(" v "),
           "?" + data.map((d) => "q=" + d.id).join("&")
         );
       }
