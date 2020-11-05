@@ -422,70 +422,10 @@ class StarView {
                 .attr('x2', x2)
                 .attr('y1', y1)
                 .attr('y2', y2);
-                // .on('mouseover',function(d, i){
-                //     console.log("mouseover", d);
-                //     // console.log(dimensions[num]);
-                //     d3.select(this)
-                //         .attr("stroke-opacity", 1);
-                //     // d3.select('#grid_' + i + '_' + num)
-                //     //     .attr({stroke-opacity: 1});
-                //         //.style('stroke-opacity', 1);
-                //     //d3.select(this).attr({'stroke-opacity': 1});
-
-                //     // d3.select('.star-label')
-                //     // // d3.select('#label_' + i + '_' + num)
-                //     //     .attr('fill-opacity', 1)
-                //     //     .text(dimensions[num] + ": " + d[dimensions[num]]);
-
-
-                // })
-                // .on('mouseout', function(d, i){
-                //     // d3.select(this).attr({
-                //     //     stroke-opacity: 0.1;
-                //     // })
-                //     // d3.select('#grid_' + i + '_' + num)
-                //     //     .style('stroke-opacity', 0.1);
-                //     d3.select(this)
-                //         .attr('stroke-opacity', 0.1);
-                // });
-
-                // var interaction = wrapper.selectAll('.interaction')
-                //     .style('display', 'none');
-
-                //   svg.selectAll('.star-interaction')
-                //     .on('mouseover', function(d) {
-                //       svg.selectAll('.star-label')
-                //         .style('display', 'none')
-
-                //       interaction
-                //         .style('display', 'block')
-
-                //       circle
-                //         .attr('cx', d.x)
-                //         .attr('cy', d.y)
-
-                //       $interactionLabel = $(interactionLabel.node());
-                //       interactionLabel
-                //         .text(d.key + ': ' + d.datum[d.key])
-                //         .style('left', d.xExtent - ($interactionLabel.width() / 2))
-                //         .style('top', d.yExtent - ($interactionLabel.height() / 2))
-                //     })
-                //     .on('mouseout', function(d) {
-                //       interaction
-                //         .style('display', 'none')
-
-                //       svg.selectAll('.star-label')
-                //         .style('display', 'block')
-                //     })
 
             r += radians;
         }
     }
-
-    // handleMouseOver() {
-    //     console.log("mouseover", d);
-    //     //d3.select(#)
-    // }
 
 
 
@@ -536,19 +476,6 @@ class StarView {
                 // .attr('alignment-baseline', 'baseline')
                 //.style('dominant-baseline', 'central')
                 .call(addHelpTooltip(dimensions[num]));
-            // console.log("something", `text.label.grid-axis-label.${dimensions[num]}#axis-label-${num}`);
-
-            // selectAllOrCreateIfNotExist(this.svg.data(dataArray).enter(), `text.label.grid-axis-label.dimensions[num]#axis-label-${num}`)
-            //     .attr('text-anchor', 'middle')
-            //     .attr('alignment-baseline', 'baseline')
-            //     .attr('dominant-baseline', 'central')
-            //     .attr('transform', function(d, i){
-            //         var center_x = margin.left + (starCircleRadius + starRadius) * (2*i + 1) + spacing * i;
-            //         var center_y = margin.top + starRadius + starCircleRadius;
-            //         return 'translate(' + (center_x + x) + ',' + (center_y + y) + ')';
-            //     })
-            //     .text(dimensions[num])
-            //     .call(addHelpTooltip(dimensions[num]));
 
             r += radians;
         }

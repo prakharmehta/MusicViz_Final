@@ -73,50 +73,6 @@ class HistogramView {
                 if(e) {
 
                     let tempArray = [];
-                    // Select all .bin-rect, and add the "fade" class if the data for that circle
-                    // lies outside of the brush-filter applied for this rectangle x and y attributes
-                    // d3.selectAll('#' + histID + ' .bin-rect')
-                    //  .classed("", function(d){
-                    //     if (+d3.select(this).attr("x") > e[0] && +d3.select(this).attr("x") + +d3.select(this).attr("width") < e[1]) {
-                    //         indexes.push(this);
-
-
-                    //         /* we gave each artist g an id in drawHistogram, use this to determine what artist this rectangle belongs to
-                    //         and therefore what key to look at in d.data (i.e. ids0 or ids1 or ids2 etc) to find the songs in this bin */
-                    //         let artistIndex = this.parentNode.id.slice(-1);
-
-                    //         // get the Spotify id of the collection (artist)
-                    //         let collectionId = _this.data[artistIndex].id;
-
-                    //         // get a list of the id's in this bin
-                    //         _this.idsInBinBrush = _this.idsInBinBrush.concat(d.data["ids" + artistIndex]); //_this.getAllIdsInBin(d);
-
-                    //         // send a filtering function out to the other components to highlight the id's in this bin everywhere
-                    //         _this.dispatch.call('highlight', this, (k) => _this.idsInBinBrush.includes(k.id));
-                    //         // console.log(_this.idsInBinBrush)
-                    //     } else {
-
-                    //         /* we gave each artist g an id in drawHistogram, use this to determine what artist this rectangle belongs to
-                    //         and therefore what key to look at in d.data (i.e. ids0 or ids1 or ids2 etc) to find the songs in this bin */
-                    //         let artistIndex = this.parentNode.id.slice(-1);
-
-                    //         // get the Spotify id of the collection (artist)
-                    //         let collectionId = _this.data[artistIndex].id;
-
-                    //         let idsToDelete= d.data["ids" + artistIndex];
-
-                    //         _this.idsInBinBrush = _this.idsInBinBrush.filter(function(id) {
-                    //             if(idsToDelete.includes(id)) {
-                    //                 return false;
-                    //             }
-                    //             return true;
-                    //         });
-
-                    //         _this.dispatch.call('highlight', this, (k) => _this.idsInBinBrush.includes(k.id));
-
-                    //     }
-                    //     // console.log("INDEXES");
-                    // })
 
                     let binsToHighlight = d3.selectAll('#' + histID + ' .bin-rect').filter(function (d) {
                         return +d3.select(this).attr("x") > e[0] && +d3.select(this).attr("x") + +d3.select(this).attr("width") < e[1]
@@ -345,14 +301,6 @@ class HistogramView {
             }
           })
           .on("mousedown", function(d) {
-            // console.log('mousedown')
-            // let brush_elm = _this.svg.select(".brush").node();
-            // let new_click_event = new Event('mousedown');
-            // new_click_event.pageX = d3.event.pageX;
-            // new_click_event.clientX = d3.event.clientX;
-            // new_click_event.pageY = d3.event.pageY;
-            // new_click_event.clientY = d3.event.clientY;
-            // brush_elm.dispatchEvent(new_click_event);
 
             var e = _this.brush.extent(),
                 m = d3.mouse(_this.svg.node()),
@@ -385,63 +333,6 @@ class HistogramView {
     // exit
     rectangles.exit().remove();
 
-    // histogramGEnter
-    //     .call(this.brush)
-    //     .select('.overlay')
-    //     .on('mouseover.passThru', function (d) {
-    //         // console.log('asdsd')
-    //         // console.log(e);
-    //         var e = d3.event;
-
-    //         var prev = this.style.pointerEvents;
-    //         this.style.pointerEvents = 'none';
-
-    //         var el = document.elementsFromPoint(d3.event.x, d3.event.y);
-    //         let elBinRect = el.filter(d => d.classList.contains('bin-rect'));
-    //         console.log(this, elBinRect);
-    //         if (elBinRect.length > 0) {
-    //           var e2 = document.createEvent('MouseEvent');
-    //           e2.initMouseEvent(e.type,e.bubbles,e.cancelable,e.view, e.detail,e.screenX,e.screenY,e.clientX,e.clientY,e.ctrlKey,e.altKey,e.shiftKey,e.metaKey,e.button,e.relatedTarget);
-
-    //           elBinRect[0].dispatchEvent(e2);
-    //         }
-
-    //         this.style.pointerEvents = prev;
-    //     })
-    //     .on('mousemove.passThru', function (d) {
-    //       // console.log('asdsd')
-    //       // console.log(e);
-    //       var e = d3.event;
-
-    //       var prev = this.style.pointerEvents;
-    //       this.style.pointerEvents = 'none';
-
-    //       var el = document.elementsFromPoint(d3.event.x, d3.event.y);
-    //       let elBinRect = el.filter(d => d.classList.contains('bin-rect'));
-          
-    //       if (elBinRect.length > 0) {
-    //         var e2 = document.createEvent('MouseEvent');
-    //         // console.log(e.type);
-    //         e2.initMouseEvent('mouseover',e.bubbles,e.cancelable,e.view, e.detail,e.screenX,e.screenY,e.clientX,e.clientY,e.ctrlKey,e.altKey,e.shiftKey,e.metaKey,e.button,e.relatedTarget);
-
-    //         elBinRect[0].dispatchEvent(e2);
-    //       }
-
-    //       this.style.pointerEvents = prev;
-    //   });
-
-
-
-      // .style("opacity", .2)
-
-    // Create axis and their labels
-
-
-        //console.log(parseInt((range[0] - range[1])/2)+range[1]);
-    // this.svg.append('text')
-    //     .attr('class', 'y_label')
-    //     .attr("transform","translate(20," + (parseInt((range[0] - range[1])/2)+range[1]+22) + ")rotate(270)")
-    //     .text('Count');
   }
 
   redraw() {

@@ -462,26 +462,6 @@ class RadialView {
 
     // buttons
     let _this = this;
-    // let angle = d3.select('.radial-mapping-select.active').attr('data-angle');
-    // d3.select('#radial-view-controls')
-    //     .attr('data-angle', angle)
-    //     .style('transform', `rotate(-${angle}deg)`)
-    // d3.selectAll('.radial-mapping-select')
-    //     .style('position', 'absolute')
-    //     .attr('data-angle', function (d, i) {
-    //         return i / d3.selectAll('.radial-mapping-select').size() * 360;
-    //     })
-    //     .style('transform', function (d, i) {
-    //         let parentAngle = d3.select('#radial-view-controls').attr('data-angle');
-    //         let angle = i / d3.selectAll('.radial-mapping-select').size() * 360 - 90;
-    //         let x = (_this.MAX_RADIAL_DIST + 65) * Math.cos(angle * Math.PI / 180);
-    //         let y = (_this.MAX_RADIAL_DIST + 65) * Math.sin(angle * Math.PI / 180);
-    //         let selfAngle = angle + 90;
-    //         if (selfAngle > 90 && selfAngle < 270) {
-    //             selfAngle += 180;
-    //         }
-    //         return `translate(${x}px, ${y}px) translate(-50%, -50%) rotate(${selfAngle}deg)`
-    //     });
   }
 
   /**
